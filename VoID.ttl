@@ -1,0 +1,26 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <#> .
+
+:LOD-a-lot a void:Dataset ;
+	dcterms:title "LOD-a-lot: A Queryable Dump of the LOD Cloud";
+	dcterms:description "LOD-a-lot compresses a large copy of the LOD Cloud (28 billion unique triples from 650K different datasets) into a single file that can be downloaded locally and queried over commodity hardware. It enables a simple and cost-effective way to query and study the LOD Cloud using 524 GB of disk space and less than 16 GB of RAM. This single-file corpus is ideal for repeatable experimentation and research; such as understanding the structure of LOD, traversal query benchmarking and query federation";
+
+	foaf:homepage <http://lod-a-lot.lod.labs.vu.nl/about/>;
+	foaf:mbox <mailto:javier.fernandez@wu.ac.at> ;
+	dcterms:created "2017-05-15"^^xsd:date;
+	dcterms:creator <https://www.wu.ac.at/en/infobiz/team/fernandez/>, <http://wouterbeek.github.io/>, <https://dataweb.infor.uva.es/miguel-a-martinez-prieto/>, <https://github.com/MarioAriasGa>;
+	dcterms:license <https://creativecommons.org/licenses/by-sa/3.0/>;
+	rdfs:seeAlso <http://lod-a-lot.lod.labs.vu.nl/about/>, <http://www.rdfhdt.org/>, <http://lodlaundromat.org/>, <http://linkeddatafragments.org/>;
+
+	void:dataDump <http://lod-a-lot.lod.labs.vu.nl/about/LOD_a_lot_v1.hdt>, <http://lod-a-lot.lod.labs.vu.nl/about/LOD_a_lot_v1.hdt.index.v1-1>;
+	void:uriLookupEndpoint <http://lod-a-lot.lod.labs.vu.nl/LOD-a-lot>;
+	
+	void:triples 28362198927 ;
+	void:distinctObjects 3178409386 ;
+    	void:distinctSubjects 3214347198 ;
+	void:properties 1168932 .
